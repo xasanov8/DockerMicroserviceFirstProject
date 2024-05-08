@@ -1,0 +1,256 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Student/Get",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7192
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Student/Get",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/GetById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7192
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Student/GetById",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/Post",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7192
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Student/Post",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/Put",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7192
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Student/Put",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Student/Delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7192
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Student/Delete",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/Blog/Get",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Blog/Get",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Blog/GetById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Blog/GetById",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Blog/Post",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Blog/Post",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Blog/Put",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Blog/Put",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Blog/Delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7060
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Blog/Delete",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/Companies/Get",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Companies/Get",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Companies/GetById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Companies/GetById",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Companies/Post",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Companies/Post",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Companies/Put",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Companies/Put",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Companies/Delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Companies/Delete",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/Product/Get",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7216
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/Get",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/GetById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7216
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/GetById",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/Post",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7216
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/Post",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/Put",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7216
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/Put",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/Delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7216
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/Delete",
+      "UpstreamHttpMethod": [ "Delete" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000"
+  }
+}
