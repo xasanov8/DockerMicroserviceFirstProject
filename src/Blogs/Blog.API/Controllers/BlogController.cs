@@ -18,9 +18,11 @@ namespace Blog.API.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Models.Blog>> GetById(int id)
-        {
-            return [.. _appDbContext.Blogs];
+        public async Task<Models.Blog> GetById(int id)
+        {   
+            var pr = await _appDbContext.Blogs.FirstOrDefaultAsync(x => x.Id == id);
+
+            return pr;
         }
 
         [HttpPost]

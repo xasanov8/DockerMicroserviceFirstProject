@@ -5,7 +5,8 @@ namespace Blog.API.Persistance
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options) => Database.Migrate();
+        : base(options) 
+                => Database.Migrate();
 
 
         public DbSet<Models.Blog> Blogs { get; set; }

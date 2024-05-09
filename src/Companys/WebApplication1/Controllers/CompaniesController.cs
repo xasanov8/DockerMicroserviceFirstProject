@@ -18,9 +18,11 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Companies>> GetById(int id)
+        public async Task<Companies> GetById(int id)
         {
-            return [.. _appDbContext.Companies];
+            var pr = await _appDbContext.Companies.FirstOrDefaultAsync(x => x.Id == id);
+
+            return pr;
         }
 
         [HttpPost]

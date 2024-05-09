@@ -19,9 +19,11 @@ namespace Product.API.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Models.Product>> GetById(int id)
+        public async Task<Models.Product> GetById(int id)
         {
-            return [.. _appDbContext.Products];
+            var pr = await _appDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+
+            return pr;
         }
 
         [HttpPost]

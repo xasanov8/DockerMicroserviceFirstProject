@@ -18,9 +18,11 @@ namespace Student.UI.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Models.Student>> GetById(int id)
+        public async Task<Models.Student> GetById(int id)
         {
-            return [.. _appDbContext.Students];
+            var pr = await _appDbContext.Students.FirstOrDefaultAsync(x => x.Id == id);
+
+            return pr;
         }
 
         [HttpPost]

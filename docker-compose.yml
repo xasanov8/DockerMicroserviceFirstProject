@@ -1,0 +1,116 @@
+version: '3.4'
+
+services:
+  blog.api:
+    image: ${DOCKER_REGISTRY-}blogapi
+    build:
+      context: .
+      dockerfile: src/Blogs/Blog.API/Dockerfile
+    depends_on:
+      - db1
+    networks:
+      - db-network
+
+  comany.api:
+    image: ${DOCKER_REGISTRY-}comanyapi
+    build:
+      context: .
+      dockerfile: src/Companys/WebApplication1/Dockerfile
+    depends_on:
+      - db2
+    networks:
+      - db-network
+
+
+  student.api:
+    image: ${DOCKER_REGISTRY-}studentapi
+    build:
+      context: .
+      dockerfile: src/Students/Student.UI/Dockerfile
+    depends_on:
+      - db3
+    networks:
+      - db-network
+
+
+  product.api:
+    image: ${DOCKER_REGISTRY-}productapi
+    build:
+      context: .
+      dockerfile: src/Products/Product.API/Dockerfile
+    depends_on:
+      - db4
+    networks:
+      - db-network
+
+  db1:
+    container_name: db1
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=axihub
+      - POSTGRES_DB=BlogsDockerMicroserviceDB
+    volumes:
+      - pgdata:/var/lib/postgresql/BlogsDockerMicroserviceDB
+    ports:
+      - "16172:5432"
+    networks:
+      - db-network
+
+  db2:
+    container_name: db2
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=axihub
+      - POSTGRES_DB=ComaniesDockerMicroserviceDB
+    volumes:
+      - pgdata:/var/lib/postgresql/ComaniesDockerMicroserviceDB
+    ports:
+      - "16172:5432"
+    networks:
+      - db-network
+
+  db3:
+    container_name: db3
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=axihub
+      - POSTGRES_DB=ProductsDockerMicroserviceDB
+    volumes:
+      - pgdata:/var/lib/postgresql/ProductsDockerMicroserviceDB
+    ports:
+      - "16172:5432"
+    networks:
+      - db-network
+
+  db4:
+    container_name: db4
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=axihub
+      - POSTGRES_DB=StudentsDockerMicroserviceDB
+    volumes:
+      - pgdata:/var/lib/postgresql/StudentsDockerMicroserviceDB
+    ports:
+      - "16172:5432"
+    networks:
+      - db-network
+
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/gate/APIgateway/Dockerfile
+
+networks:
+  db-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+
+
